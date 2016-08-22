@@ -1,7 +1,6 @@
-var pepipostapiv10lib = require('pepipostapiv10lib');
+var PepipostSDK = require('pepipost-sdk-nodejs');
 
-var Email = pepipostapiv10lib.EmailController;
-
+var Email = PepipostSDK.EmailController;
 
 var data = {
     "api_key": "yoursecretapikey",
