@@ -1,0 +1,13 @@
+{
+  "name": "pepipostapiv10lib",
+  "version": "1.0.0",
+  "description": "Pepipost SDK for NodeJS",
+  "main": "./lib/index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Tabrez Shaikh",
+  "dependencies": {
+    "request": "^2.55.0",
+    "string": "^3.1.1"
+  }
+}
