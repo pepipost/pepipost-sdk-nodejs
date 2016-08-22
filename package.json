@@ -1,6 +1,6 @@
 {
-  "name": "pepipostapiv10lib",
-  "version": "1.0.0",
+  "name": "pepipost-sdk-nodejs",
+  "version": "0.1.0",
   "description": "Pepipost SDK for NodeJS",
   "main": "./lib/index.js",
   "scripts": {},
