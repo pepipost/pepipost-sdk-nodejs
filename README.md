@@ -45,7 +45,8 @@ function callback_mail_sent(err_msg,parsed,context){
 }
 ```
 
-Change the "yoursecretkey" with your API key and example.com with your approved domain name.
+Change the "yoursecretkey" with your API key and example.com with your approved domain name. To get your api key you need to signup/register on [Pepipost](http://pepipost.com/)
+
 
 ```
 nodejs example.js
