@@ -8,15 +8,15 @@
 
 # Official nodejs library of Pepipost
 
-This library allows you to quickly integrate Pepipost Web API v2 for sending emails.
+This SDK contains methods for easily interacting with the Pepipost Email Sending API to send emails in a few seconds.
 
-We are trying to make our libraries Community Driven- which means we need your help in building the right things in proper order we would request you to help us by sharing comments, creating new issues or pull requests.
+We are trying to make our libraries community driven and we need your help in building the right things the right way you. Your opinion is very much valued so please share comments, create [issues](https://github.com/pepipost/pepipost-sdk-nodejs/issues) and [pull requests](https://github.com/pepipost/pepipost-sdk-nodejs/pulls).
 
 We welcome any sort of contribution to this library.
 
 The latest 2.5.0 version of this library provides is fully compatible with the latest Pepipost v2.0 API.
 
-# Table of Content
+# Table of Contents
 
  * [Installation](#installation)
  * [Quick Start](#quick-start)
