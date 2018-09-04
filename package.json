@@ -1,13 +1,47 @@
 {
-  "name": "pepipost-sdk-nodejs",
-  "version": "0.2.0",
-  "description": "Pepipost SDK for NodeJS",
-  "main": "./lib/index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "Tabrez Shaikh",
-  "dependencies": {
-    "request": "^2.55.0",
-    "string": "^3.1.1"
-  }
+	"name": "pepipost",
+	"version": "2.5.2",
+	"description": "Official nodejs library for sending email using web API v2",
+	"main": "./lib/index.js",
+	"scripts": {
+		"lint": "eslint lib"
+	},
+	"keywords": [],
+	"author": "Vikram Sahu - DX team, Pepipost",
+	"bugs": {
+		"email": "dx@pepipost.com"
+	},
+	"license": "(MIT)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pepipost/pepipost-sdk-nodejs.git"
+	},
+	"devDependencies": {
+		"eslint": "^3.18.0",
+		"eslint-config-airbnb": "^14.1.0",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-jsx-a11y": "^4.0.0",
+		"eslint-plugin-react": "^6.10.3"
+	},
+	"dependencies": {
+		"request": "^2.55.0",
+		"moment": "^2.17.1"
+	},
+	"eslintConfig": {
+		"extends": "airbnb",
+		"env": {
+			"commonjs": true,
+			"node": true,
+			"mocha": true
+		},
+		"rules": {
+			"indent": [
+				"error",
+				4
+			],
+			"no-underscore-dangle": 0,
+			"strict": 0,
+			"prefer-rest-params": 0
+		}
+	}
 }
