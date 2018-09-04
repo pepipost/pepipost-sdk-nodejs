@@ -37,7 +37,7 @@ The latest 2.5.0 version of this library provides is fully compatible with the l
    * npm (by default installed when node is installed).
    * node 
    * [Pepipost library](https://www.npmjs.com/package/pepipost) 
-   * A free account on [Pepipost](https://app.pepipost.com/index.php/signup/registeruser). If you don't have a one, click here to sign-up and get 30,000 emails free every month.
+   * A free account on [Pepipost](https://pepipost.com/). If you don't have a one, [click here](https://app.pepipost.com/index.php/signup/registeruser) to sign-up and get 30,000 emails free every month.
    
 <a name="quick-start"></a>
 # Quick Start
@@ -170,7 +170,7 @@ promise.then((response) => {
 <a name="announcements"></a>
 # Announcements
 
-v2.5.0 has been released! Please see the [release notes](https://github.com/pepipost/pepipost-sdk-nodejs/releases/tag/v2.5.0) for details.
+v2.5.0 has been released! Please see the [release notes](https://github.com/pepipost/pepipost-sdk-nodejs/releases/tag/v2.5.2) for details.
 
 All updates to this library are documented in our [releases](https://github.com/pepipost/pepipost-sdk-nodejs/releases). For any queries, feel free to reach out us at dx@pepipost.com
 
