@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/pepipost.svg)](https://www.npmjs.com/package/pepipost)
 [![NpmLicense](https://img.shields.io/npm/l/pepipost.svg)](https://www.npmjs.com/package/pepipost)
+[![Open Source Helpers](https://www.codetriage.com/pepipost/pepipost-sdk-nodejs/badges/users.svg)](https://www.codetriage.com/pepipost/pepipost-sdk-nodejs)
 [![Twitter Follow](https://img.shields.io/twitter/follow/pepi_post.svg?style=social&label=Follow)](https://twitter.com/pepi_post)
 
 
