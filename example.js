@@ -1,18 +1,18 @@
 const lib = require('./lib');
 const configuration = lib.Configuration;
 const controller = lib.EmailController;
-let apiKey = '304b54cbda55828c0a34070ed7b626d5';
+let apiKey = 'api-key-here';
 let body = new lib.EmailBody();
 
 
 body.personalizations = [];
 body.personalizations[0] = new lib.Personalizations();
-body.personalizations[0].recipient = 'vikramsahu36@gmail.com';
+body.personalizations[0].recipient = 'your-email-id@registerdomain.com';
 body.personalizations[0].recipientCc = [];
 
 
 body.from = new lib.From();
-body.from.fromEmail = 'pepi_nodesdk@pepipost.com';
+body.from.fromEmail = 'pepi_nodesdk@xxx.com';
 body.from.fromName = 'Nodejs SDK';
 body.subject = 'Pepi- Nodejs';
 body.content = 'this is pepipost email';
