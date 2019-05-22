@@ -126,6 +126,7 @@ The latest 2.5.0 version of this library provides is fully compatible with the l
 const lib = require('pepipost');
 const configuration = lib.Configuration;
 const controller = lib.EmailController;
+const Attribute = lib.Attribute;
 let apiKey = 'api key to be passed here';
 let body = new lib.EmailBody();
 
@@ -134,7 +135,9 @@ body.personalizations[0] = new lib.Personalizations();
 body.personalizations[0].recipient = 'email To be sent to';
 body.personalizations[0].xApiheaderCc = '123';
 body.personalizations[0].xApiheader = '12';
-body.personalizations[0].attributes = JSON.parse('{"name":"pepi"}');
+body.personalizations[0].attributes = new Attribute({
+   name: 'Jon Doe'
+});
 body.personalizations[0].attachments = [];
 
 body.personalizations[0].attachments[0] = new lib.Attachments();
