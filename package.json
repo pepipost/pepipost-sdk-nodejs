@@ -24,8 +24,6 @@
 		"eslint-plugin-react": "^6.10.3"
 	},
 	"dependencies": {
-		"request": "^2.55.0",
-		"moment": "^2.17.1"
 	},
 	"eslintConfig": {
 		"extends": "airbnb",
