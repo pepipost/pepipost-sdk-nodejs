@@ -160,9 +160,9 @@ body.settings.opentrack = 1;
 body.settings.unsubscribe = 1;
 body.settings.bcc = 'bcc email id to be passed';
 body.replyToId = 'replyto id to be passed here';
+BASE_URI = "";
 
-
-const promise = controller.createSendEmail(apiKey, body);
+const promise = controller.createSendEmail(apiKey, body,BASE_URI);
 
 promise.then((response) => {
     console.log(response);
