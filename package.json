@@ -1,6 +1,6 @@
 {
 	"name": "pepipost",
-	"version": "2.5.2",
+	"version": "2.5.3",
 	"description": "Official nodejs library for sending email using web API v2",
 	"main": "./lib/index.js",
 	"scripts": {
@@ -24,6 +24,8 @@
 		"eslint-plugin-react": "^6.10.3"
 	},
 	"dependencies": {
+        "moment": "^2.24.0",
+        "request": "^2.88.0"
 	},
 	"eslintConfig": {
 		"extends": "airbnb",
