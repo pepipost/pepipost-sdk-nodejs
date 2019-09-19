@@ -16,7 +16,7 @@ We are trying to make our libraries community driven and we need your help in bu
 
 We welcome any sort of contribution to this library.
 
-The latest 2.5.0 version of this library provides is fully compatible with the latest Pepipost v2.0 API.
+The latest 2.6.0 version of this library provides is fully compatible with the latest Pepipost v2.0 API.
 
 # Table of Contents
 
@@ -160,9 +160,9 @@ body.settings.opentrack = 1;
 body.settings.unsubscribe = 1;
 body.settings.bcc = 'bcc email id to be passed';
 body.replyToId = 'replyto id to be passed here';
+BASE_URI = "";
 
-
-const promise = controller.createSendEmail(apiKey, body);
+const promise = controller.createSendEmail(apiKey, body,BASE_URI);
 
 promise.then((response) => {
     console.log(response);
@@ -174,7 +174,7 @@ promise.then((response) => {
 <a name="announcements"></a>
 # Announcements
 
-v2.5.0 has been released! Please see the [release notes](https://github.com/pepipost/pepipost-sdk-nodejs/releases/tag/v2.5.2) for details.
+v2.6.0 has been released! Please see the [release notes](https://github.com/pepipost/pepipost-sdk-nodejs/releases/tag/2.6.0) for details.
 
 All updates to this library are documented in our [releases](https://github.com/pepipost/pepipost-sdk-nodejs/releases). For any queries, feel free to reach out us at dx@pepipost.com
 
