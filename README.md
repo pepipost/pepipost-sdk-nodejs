@@ -16,7 +16,7 @@ We are trying to make our libraries community driven and we need your help in bu
 
 We welcome any sort of contribution to this library.
 
-The latest 2.5.0 version of this library provides is fully compatible with the latest Pepipost v2.0 API.
+The latest 2.6.0 version of this library provides is fully compatible with the latest Pepipost v2.0 API.
 
 # Table of Contents
 
