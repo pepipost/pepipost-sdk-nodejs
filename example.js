@@ -1,4 +1,5 @@
-const lib = require('./lib');
+//if you are using SDK require will be changed to require('./lib').
+const lib = require('pepipost');
 const configuration = lib.Configuration;
 const controller = lib.EmailController;
 const Attribute = lib.Attribute;
