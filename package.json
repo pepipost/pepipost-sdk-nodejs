@@ -1,6 +1,6 @@
 {
 	"name": "pepipost",
-	"version": "2.6.0",
+	"version": "2.6.1",
 	"description": "Official nodejs library for sending email using web API v2",
 	"main": "./lib/index.js",
 	"scripts": {
