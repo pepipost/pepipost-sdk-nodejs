@@ -122,52 +122,63 @@ The latest 2.6.0 version of this library provides is fully compatible with the l
 # Usage
 
 ```javascript
-//if you are using SDK require will be changed to require('./lib').
-const lib = require('pepipost');
+'use strict';
+
+const lib = require('lib');
 const configuration = lib.Configuration;
-const controller = lib.EmailController;
-const Attribute = lib.Attribute;
-let apiKey = 'api key to be passed here';
-let body = new lib.EmailBody();
+const controller = lib.SendController;
+
+configuration.apiKey = '96c909c6dajkner32cef747979ea8477';
+let body = new lib.Send();
+
+body.from = new lib.From();
+body.from.email = 'hello@your-registered-domain-with-pepipost';
+body.from.name = 'Pepipost';
+body.subject = 'Pepipost Test Email thorugh Nodejs SDK';
+
+body.content = [];
+body.content[0] = new lib.Content();
+body.content[0].type = lib.TypeEnum.HTML;
+body.content[0].value = '<html><body>Hello [%NAME%], Email testing is successful. <br> Hope you enjoyed this integration. <br></html>';
 
 body.personalizations = [];
 body.personalizations[0] = new lib.Personalizations();
-body.personalizations[0].recipient = 'email To be sent to';
-body.personalizations[0].xApiheaderCc = '123';
-body.personalizations[0].xApiheader = '12';
-body.personalizations[0].attributes = new Attribute({
-   name: 'Jon Doe'
-});
-body.personalizations[0].attachments = [];
+body.personalizations[0].attributes = JSON.parse('{"NAME":"User"}');
 
-body.personalizations[0].attachments[0] = new lib.Attachments();
-body.personalizations[0].attachments[0].fileContent = 'SGVsbG8gRm9sa3MsIFRoaXMgaXMgUGVwaXBvc3QncyBub2RlSlMgU0RL'; //base64encoded value to be passed here
-body.personalizations[0].attachments[0].fileName = 'filename.txt';
-body.personalizations[0].recipientCc = ['CC emailid to be sent'];
+body.personalizations[0].to = [];
+body.personalizations[0].to[0] = new lib.EmailStruct();
+body.personalizations[0].to[0].name = 'to-name';
+body.personalizations[0].to[0].email = 'to@mydomain.name';
 
+body.personalizations[0].cc = [];
+body.personalizations[0].cc[0] = new lib.EmailStruct();
+body.personalizations[0].cc[0].name = 'to-cc';
+body.personalizations[0].cc[0].email = 'to-cc-address@mydomain.name';
 
-body.tags = 'tagsTransnodejs';
-body.from = new lib.From();
-body.from.fromEmail = 'your from domain';
-body.from.fromName = 'Nodejs Pepi';
-body.subject = 'Pepipost SDK For Node JS';
-body.content = 'Hello Folks, This is Pepipost\'s nodeJS SDK. Regards [% name %]';
+body.personalizations[0].bcc = [];
+body.personalizations[0].bcc[0] = new lib.EmailStruct();
+body.personalizations[0].bcc[0].name = 'to-bcc';
+body.personalizations[0].bcc[0].email = 'to-bcc-address@mydomain.name';
+
 body.settings = new lib.Settings();
+body.settings.footer = true;
+body.settings.clickTrack = true;
+body.settings.openTrack = true;
+body.settings.unsubscribeTrack = true;
 
-body.settings.footer = 1;
-body.settings.clicktrack = 1;
-body.settings.opentrack = 1;
-body.settings.unsubscribe = 1;
-body.settings.bcc = 'bcc email id to be passed';
-body.replyToId = 'replyto id to be passed here';
-BASE_URI = "";
+body.bcc = [];
+body.bcc[0] = new lib.EmailStruct();
+body.bcc[0].name = 'glob-bcc';
+body.bcc[0].email = 'glob-bcc@mydomain.name';
 
-const promise = controller.createSendEmail(apiKey, body,BASE_URI);
+const promise = controller.createGenerateTheMailSendRequest(body);
 
 promise.then((response) => {
-    console.log(response);
+  console.log(response)
 }, (err) => {
-    console.log(response);
+  // this block will be executed on endpoint call failure
+  console.log(err)
+  // `err` is an 'object' containing more information about the error
 });
 ```
 
