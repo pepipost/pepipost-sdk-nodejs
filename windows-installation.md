@@ -55,7 +55,7 @@ Now right click on the folder name and select the `New File` option to create a 
 var lib = require('lib');
 ```
 
-copy the example.js file and make neccessary changes.
+copy the [example.js](https://github.com/pepipost/pepipost-sdk-nodejs/blob/master/example.js) file and make neccessary changes.
 
 Save changes.
 
