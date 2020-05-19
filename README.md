@@ -48,19 +48,24 @@ The latest 2.6.0 version of this library provides is fully compatible with the l
    * `node --version`
    * `npm -version`
 
-   ![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=Pepipost%20API-Node)
+   ![Version Check](https://i.imgur.com/1JeFUFS.png)
 
 
-2. Since npm is installed, you can directly install pepipost packages using below command:
+2. Since npm is installed, you can directly clone the pepipost reposistory using below command:
    
-    ``` mkdir TestConsole && cd TestConsole```
+    ```bash
+    git clone https://github.com/pepipost/pepipost-sdk-nodejs.git pepi-nodejs
+    ```
   
-    ![img1](http://app1.falconide.com/integration_imgs/node/2.png)
+    ![img1](https://i.imgur.com/ytN9cqC.png)
   
     
-    ```npm i pepipost ```
+    ```bash
+    cd pepi-nodejs
+    npm install 
+    ```
     
-    ![img2](http://app1.falconide.com/integration_imgs/node/3.png)
+    ![img2](https://i.imgur.com/pILQrq6.png)
     
 
      Once your package is installed, you will see `node_modules` folder.
@@ -185,7 +190,7 @@ promise.then((response) => {
 <a name="announcements"></a>
 # Announcements
 
-v2.6.0 has been released! Please see the [release notes](https://github.com/pepipost/pepipost-sdk-nodejs/releases/tag/2.6.0) for details.
+v5.0.0 has been released! Please see the [release notes](https://github.com/pepipost/pepipost-sdk-nodejs/releases/tag/2.6.0) for details.
 
 All updates to this library are documented in our [releases](https://github.com/pepipost/pepipost-sdk-nodejs/releases). For any queries, feel free to reach out us at dx@pepipost.com
 
