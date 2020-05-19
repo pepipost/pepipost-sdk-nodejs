@@ -78,28 +78,24 @@ The latest 2.6.0 version of this library provides is fully compatible with the l
 
       Click on `File` and select `Open Folder`.
 
-      ![Open Folder](https://apidocs.io/illustration/nodejs?step=openFolder)
-
        Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-       ![Open Project](http://app1.falconide.com/integration_imgs/node/6.png)
+       ![Open Project](https://i.imgur.com/7G5JwfX.png)
        
 
    2. Creating a Test File
 
       Now right click on the folder name. Select the `New File` option to create a new test file.
       
-      ![img](http://app1.falconide.com/integration_imgs/node/8.png)
-      
-      Save it as `example.js`. Now import the generated NodeJS library using the following lines of code:
+      Save it as `test.js`. Now import the Pepipost NodeJS library using the following lines of code:
 
       ```js
-      var lib = require('pepipost');
+      var lib = require('./lib');
       ```
       
       Save changes.
 
-      ![Create new file](http://app1.falconide.com/integration_imgs/node/9.png)
+      ![Create new file](https://i.imgur.com/WUDBJrQ.png)
 
 
    3. Copy and paste the code from [SampleUsage](#Usage) in example.js file
@@ -115,12 +111,21 @@ The latest 2.6.0 version of this library provides is fully compatible with the l
 
    4. Running the test file
 
-      To run the `example.js` file, open up the command prompt and navigate to the path where the SDK folder resides. Type the following command to run the file:
+      To run the `test.js` file, open up the command prompt and navigate to the path where the SDK folder resides. Type the following command to run the file:
 
 ```
-      node example.js
+      node test.js
 ```
-   ![Run file](http://app1.falconide.com/integration_imgs/node/10.png)
+  
+```json
+{
+   "data": {
+   	"message_id": "e8820eeb0ee94807f1ce88652b1dd627"
+   },
+   "message": "OK",
+   "status": "success"
+}
+```
 
 
 <a name="usage"></a>
