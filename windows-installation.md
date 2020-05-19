@@ -55,6 +55,8 @@ Now right click on the folder name and select the `New File` option to create a 
 var lib = require('lib');
 ```
 
+copy the example.js file and make neccessary changes.
+
 Save changes.
 
 ![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=pepipost-Node)
