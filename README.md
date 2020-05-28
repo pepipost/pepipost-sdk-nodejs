@@ -136,59 +136,48 @@ The latest 2.6.0 version of this library provides is fully compatible with the l
 
 const lib = require('lib');
 const configuration = lib.Configuration;
-const controller = lib.SendController;
+const controller = lib.MailSendController;
 
-configuration.apiKey = '96c909c6dajkner32cef747979ea8477';
+configuration.apiKey = '4D51B3ECA2D4ED3A67E4E043B3F1A4D1';
+
 let body = new lib.Send();
 
 body.from = new lib.From();
 body.from.email = 'hello@your-registered-domain-with-pepipost';
 body.from.name = 'Pepipost';
-body.subject = 'Pepipost Test Email thorugh Nodejs SDK';
+body.subject = 'Pepipost Test Mail from SDK';
 
 body.content = [];
 body.content[0] = new lib.Content();
 body.content[0].type = lib.TypeEnum.HTML;
-body.content[0].value = '<html><body>Hello [%NAME%], Email testing is successful. <br> Hope you enjoyed this integration. <br></html>';
+body.content[0].value = '<html><body>Hello, Welcome to Pepipost Family.<br>My name is [% name %].<br>my love is sending [% love %]</body> <br></html>';
 
 body.personalizations = [];
 body.personalizations[0] = new lib.Personalizations();
-body.personalizations[0].attributes = JSON.parse('{"NAME":"User"}');
+body.personalizations[0].attributes = JSON.parse('{"name":"Pepi","love":"Email"}');
+
+body.personalizations[0].attachments = [];
+body.personalizations[0].attachments[0] = new lib.Attachments();
+body.personalizations[0].attachments[0].content = 'SGVsbG8sIHRoaXMgZmlsZSBpcyBhbiBpbmZvcm1hdGlvbmFsIGZpbGU6OiBTZW5kaW5nIGVtYWlscyB0byB0aGUgaW5ib3ggaXMgd2hhdCB3ZSBkbywgYnV0IHRoYXTigJlzIG5vdCB0aGUgb25seSByZWFzb24gd2h5IGRldmVsb3BlcnMgYW5kIGVudGVycHJpc2VzIGxvdmUgdXMuIFdlIGFyZSB0aGUgb25seSBFU1AgdGhhdCBkb2VzbuKAmXQgY2hhcmdlIGZvciBlbWFpbHMgb3BlbmVkLg==';
+body.personalizations[0].attachments[0].name = 'personalized-file.txt';
 
 body.personalizations[0].to = [];
 body.personalizations[0].to[0] = new lib.EmailStruct();
-body.personalizations[0].to[0].name = 'to-name';
-body.personalizations[0].to[0].email = 'to@mydomain.name';
+body.personalizations[0].to[0].name = 'to-address';
+body.personalizations[0].to[0].email = 'to-address@mydomain.name';
 
-body.personalizations[0].cc = [];
-body.personalizations[0].cc[0] = new lib.EmailStruct();
-body.personalizations[0].cc[0].name = 'to-cc';
-body.personalizations[0].cc[0].email = 'to-cc-address@mydomain.name';
+body.tags = ['campaign'];
 
-body.personalizations[0].bcc = [];
-body.personalizations[0].bcc[0] = new lib.EmailStruct();
-body.personalizations[0].bcc[0].name = 'to-bcc';
-body.personalizations[0].bcc[0].email = 'to-bcc-address@mydomain.name';
-
-body.settings = new lib.Settings();
-body.settings.footer = true;
-body.settings.clickTrack = true;
-body.settings.openTrack = true;
-body.settings.unsubscribeTrack = true;
-
-body.bcc = [];
-body.bcc[0] = new lib.EmailStruct();
-body.bcc[0].name = 'glob-bcc';
-body.bcc[0].email = 'glob-bcc@mydomain.name';
-
-const promise = controller.createGenerateTheMailSendRequest(body);
+const promise = controller.createGeneratethemailsendrequest(body);
 
 promise.then((response) => {
-  console.log(response)
+    // this block will be executed on successful endpoint call
+
+    // `response` will be of type 'object'
 }, (err) => {
-  // this block will be executed on endpoint call failure
-  console.log(err)
-  // `err` is an 'object' containing more information about the error
+    // this block will be executed on endpoint call failure
+
+    // `err` is an 'object' containing more information about the error
 });
 ```
 
