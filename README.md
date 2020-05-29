@@ -171,13 +171,9 @@ body.tags = ['campaign'];
 const promise = controller.createGeneratethemailsendrequest(body);
 
 promise.then((response) => {
-    // this block will be executed on successful endpoint call
-
-    // `response` will be of type 'object'
+    console.log(response);
 }, (err) => {
-    // this block will be executed on endpoint call failure
-
-    // `err` is an 'object' containing more information about the error
+    console.log(err);
 });
 ```
 
