@@ -1,6 +1,6 @@
 'use strict';
 
-const lib = require('lib');
+const lib = require('./lib');
 const configuration = lib.Configuration;
 const controller = lib.MailSendController;
 
@@ -16,13 +16,13 @@ body.subject = 'Pepipost Test Mail from SDK';
 body.templateId = 123;
 
 body.content = [];
-body.content[0] = new lib.Content();
-body.content[0].type = lib.TypeEnum.AMP;
-body.content[0].value = '<!doctype html><html ⚡4email><head><meta charset="utf-8"><style amp4email-boilerplate>body{visibility:hidden}</style><script async src="https://cdn.ampproject.org/v0.js"></script></head><body>Hello, world. This is amp mail 1. </body></html>';
+let amp_type = lib.TypeEnum.AMP;
+let amp_value = '<!doctype html><html ⚡4email><head><meta charset="utf-8"><style amp4email-boilerplate>body{visibility:hidden}</style><script async src="https://cdn.ampproject.org/v0.js"></script></head><body>Hello, world. This is amp mail 1. </body></html>';
+body.content[0] = new lib.Content({type: amp_type,value: amp_value});
 
-body.content[1] = new lib.Content();
-body.content[1].type = lib.TypeEnum.HTML;
-body.content[1].value = '<html><body>Hello, Welcome to Pepipost Family.<br>My name is [% name %].<br>my love is sending [% love %]</body> <br></html>';
+let type = lib.TypeEnum.HTML;
+let value = '<html><body>Hello, Welcome to Pepipost Family.<br>My name is [% name %].<br>my love is sending [% love %]</body> <br></html>';
+body.content[1] = new lib.Content({type: type,value: value});
 
 body.attachments = [];
 body.attachments[0] = new lib.Attachments();
