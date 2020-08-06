@@ -1,6 +1,6 @@
 'use strict';
 
-const lib = require('lib');
+const lib = require('./lib');
 const configuration = lib.Configuration;
 const controller = lib.MailSendController;
 
@@ -14,9 +14,9 @@ body.from.name = 'Pepipost';
 body.subject = 'Pepipost Test Mail from SDK';
 
 body.content = [];
-body.content[0] = new lib.Content();
-body.content[0].type = lib.TypeEnum.HTML;
-body.content[0].value = '<html><body>Hello, Welcome to Pepipost Family.<br>My name is [% name %].<br>my love is sending [% love %]</body> <br></html>';
+let type = lib.TypeEnum.HTML;
+let value = '<html><body>Hello, Welcome to Pepipost Family.<br>My name is [% name %].<br>my love is sending [% love %]</body> <br></html>';
+body.content[0] = new lib.Content({type: type,value: value});
 
 body.personalizations = [];
 body.personalizations[0] = new lib.Personalizations();
